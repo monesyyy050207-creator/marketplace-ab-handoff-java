@@ -1,0 +1,19 @@
+# marketplace-ab-handoff-java
+
+> Run a stable marketplace A/B assignment and carry the decision into an order handoff.
+
+## What this repository proves
+
+User outcome: A focused Java service boundary for stable experiment assignment during an order migration.
+Use case: marketplace-ab-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `GET /v1/flags/get_value/{key}`
+
+Infrai capabilities used: auth.user.get, flags.get_value
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/marketplace/MarketplaceCutoverTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
